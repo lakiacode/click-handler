@@ -15,17 +15,23 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
-        <div id="color_box" class="gray"></div>        
+        <button id="pink_button">Pink</button>
+        <div id="color_box" class="gray"></div> 
+           
         <script>
             const gray_button = document.getElementById("gray_button");
             const blue_button = document.getElementById("blue_button");
+            const pink_button = document.getElementById("pink_button");
             const color_box = document.getElementById("color_box");
             gray_button.onclick = function() {
                 color_box.className = "gray";
             };
             blue_button.onclick = function () {
                 color_box.className = "blue";
-            }
+            };
+            pink_button.onclick = function () {
+                color_box.className = "pink";
+            };
             /* TODO 1
              *
              * Add a third button (and the associated event handler)
@@ -50,7 +56,12 @@
                  * then updates the text content of "countspan"
                  * to show the current value of "count".
                  */
+
+            count++;
+            countspan.textContent=count;
+
             }
+            
         </script>
 
         <hr>
@@ -66,6 +77,14 @@
                  * alert dialog stating whether the count
                  * (from part 2, above) is even or odd.
                  */
+                 if (count % 2 ==0){ 
+                     alert ("this number is even");
+        
+                  
+
+                 }else {
+                     alert("this number is odd")
+                 }
             }
         </script>
     </body>
